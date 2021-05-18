@@ -1,0 +1,66 @@
+body
+{
+background-color:black;
+font-family: 'Staatliches', cursive;
+color:white;
+}
+
+h1{
+    width:100%;
+    font-size:35px !important; 
+    margin:0;
+    padding:20px !important;
+}
+
+span
+{
+    font-size:25px;
+    color:black;
+}
+
+.speed_div
+{
+    float:left;
+}
+
+.speed_div img
+{
+    width:350px;
+}
+
+#speed
+{
+    font-size:20px;
+    color:black;
+}
+
+.volume_div
+{
+    float:right;
+}
+
+.volume_div img
+{
+    width:350px;
+}
+
+#volume
+{
+    font-size:20px;
+    color:black;
+}
+
+button
+{
+    margin-left:30px;
+    font-size:25px !important;
+}
+
+canvas
+{
+border:5px solid white;
+box-shadow:5px 10px 10px lightskyblue;
+margin-top:30px;
+border-bottom-left-radius:15px;
+border-top-right-radius:15px;
+}

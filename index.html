@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Gesture Recognition</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/addons/p5.sound.min.js" ></script> 
+    <link href="style.css" rel="stylesheet">
+</head>
+<center>
+    <body>
+    <h1 class="btn btn-info">AI DJ Web App!
+       <br> <span>Note: &nbsp;&nbsp;Move your left wrist up and down to decrease 
+           and increase the volume, similarily move your right wrist to change the speed</span>
+       </h1><br><br><br><br>
+       <button class="btn btn-primary glyphicon glyphicon-play" onclick="play()"></button>
+       <button class="btn btn-primary glyphicon glyphicon-pause" onclick="pause()"></button>
+       <button class="btn btn-primary glyphicon glyphicon-stop" onclick="stop()"></button>
+
+<div class="speed_div"><img src="rokid_wave_sound_fantasy.gif"><br><h2 class="btn btn-info" id="speed">Speed</h2></div>
+<div class="volume_div"><img src="rokid_wave_sound_fantasy.gif"><br><h2 class="btn btn-info" id="volume">Volume</h2></div>
+    </body>
+
+</center>
+<script src="main.js"></script>
+</html>
