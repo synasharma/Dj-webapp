@@ -3,7 +3,7 @@ lw_x="";
 rw_x="";
 lw_y="";
 rw_y="";
-
+lw_score="";
 function preload()
 {
 song=loadSound("HP.mp3");
@@ -11,7 +11,7 @@ song=loadSound("HP.mp3");
 
 function setup()
 {
-canvas=createCanvas(500,400);
+canvas=createCanvas(600,500);
 canvas.center();
 video=createCapture(VIDEO);
 video.hide();
@@ -22,11 +22,6 @@ poseNet.on('pose',getPoses);
 function modelLoaded()
 {
     console.log("Posenet is intialized!");
-}
-
-function draw()
-{
-image(video,0,0,500,400);
 }
 
 function play()
@@ -59,5 +54,24 @@ function getPoses(result)
         console.log("left Wrist y value: "+lw_y);
         console.log("right Wrist x value: "+rw_x);
         console.log("right Wrist y value: "+rw_y);
+        lw_score=result[0].pose.keypoints[9].score;
+        console.log("lw_score is: ",lw_score);
     }
+}
+
+function draw()
+{
+image(video,0,0,600,500);
+fill('blue');
+stroke('black');
+if (lw_score>0.2)
+{
+    circle(lw_x,lw_y,20);
+    removeDecimals=floor(lw_y);
+    console.log(removeDecimals);
+    volume=removeDecimals/500;
+    console.log("volume: ",volume);
+    song.setVolume(volume);
+    document.getElementById("volume").innerHTML="volume: "+volume;
+}
 }
